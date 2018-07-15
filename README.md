@@ -4,7 +4,7 @@ This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata
 
 ## Status
 
-This project is work in progress. The functionaity described in this README might not yet be implemented or not yet work as described.
+This project is work in progress. The functionality described in this README might not yet be implemented or not yet work as described.
 
 ## Files
 
@@ -17,7 +17,7 @@ To use the Shapes to validate data you need a SHACL validator such as [TopBraid 
 
     shaclvalidate -shapesfile ech-0200.shacl.ttl -datafile data.ttl
 
-For example (from this direcory):
+For example (from this directory):
 
     shaclvalidate -shapesfile ech-0200.shacl.ttl -datafile .\examples\minimal.valid.ttl
 
@@ -27,4 +27,4 @@ This project is similar an partially based on the [EU DCAT-AP SHACL constraint d
 
 ## License
 
-As prospective part of an [eCH](https://www.ech.ch/) standard the code and documetations in this repository can be used, distributed and further developed without any restriction by patents or licenses.
+As prospective part of an [eCH](https://www.ech.ch/) standard the code and documentations in this repository can be used, distributed and further developed without any restriction by patents or licenses.
