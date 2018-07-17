@@ -1,6 +1,6 @@
 # SHACL Shapes for the DCAT Application Profile for Data Portals in Switzerland
 
-This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 Standard](https://www.w3.org/TR/shacl/).
+This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 Standard](https://www.ech.ch/vechweb/page?p=dossier&documentNumber=eCH-0200&documentVersion=1.0).
 
 ## Status
 
