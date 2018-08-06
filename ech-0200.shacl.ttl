@@ -238,8 +238,6 @@ dcat:Distribution
       sh:nodeKind sh:Literal ;
       sh:severity sh:Violation ;
     ] ;
-
-
   sh:property [
       sh:path dct:publisher ;
       sh:class foaf:Agent ;
@@ -269,6 +267,74 @@ dcat:Distribution
       sh:severity sh:Violation ;
       sh:node :DateType ;
     ] ;
+  sh:property [
+      sh:path dct:accessURL ;
+      sh:class rdfs:Resource ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:rights ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:class dct:RightsStatement ;
+    ] ;
+  sh:property [
+      sh:path dct:license ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:class dct:LicenseDocument ;
+    ] ;
+  sh:property [
+      sh:path dct:identifier ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path dct:downloadURL ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:class rdfs:Resource ;
+    ] ;
+  sh:property [
+      sh:path dct:byteSize ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:class rdfs:Resource ;
+    ] ;
+  sh:property [
+      sh:path dct:mediaType ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:class dct:MediaTypeOrExtent ;
+    ] ;
+  sh:property [
+      sh:path dct:format ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:class dct:MediaTypeOrExtent ;
+    ] ;
+  sh:property [
+      sh:path dct:coverage ;
+      sh:severity sh:Violation ;
+      sh:class dct:LocationPeriodOrJurisdiction ;
+    ] ;
+  sh:property [
+      sh:path schema:image ;
+      sh:severity sh:Violation ;
+      sh:class sh:or [
+          schema:url ;
+          schema:ImageObject ;
+          ];
+    ] ;
+  sh:property [
+      sh:path adms:status ;
+      sh:maxCount 0 ;
+      sh:severity sh:Violation ;
+    ] ;
+
 .
 
 ### SHAPES
@@ -279,4 +345,10 @@ dcat:Distribution
   rdfs:label "Date" ;
   sh:message "The values must be data typed as xsd:date" ;
   sh:datatype xsd:date
+.
+
+:DecimalType
+  rdf:type sh:NodeShape ;
+  rdfs:label "Decimal" ;
+  sh:datatype xsd:decimal
 .
