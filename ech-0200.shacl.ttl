@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
 :MandatoryCatalog
   rdf:type sh:NodeShape ;
@@ -17,4 +18,265 @@
         ] ;
     ] ;
   sh:targetNode dcat:Catalog ;
+.
+
+
+dcat:Catalog
+  rdf:type sh:NodeShape ;
+  sh:name "Catalog"@en ;
+  sh:property [
+      sh:path dct:title ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:description ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:issued ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node :DateType ;
+    ] ;
+  sh:property [
+      sh:path dct:modified ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node :DateType ;
+    ] ;
+  sh:property [
+      sh:path foaf:homepage ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:publisher ;
+      sh:class foaf:Agent ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dcat:themeTaxonomy ;
+      sh:class skos:Concept-Scheme ;
+      sh:minCount 1 ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:path dcat:dataset ;
+      sh:class dcat:Dataset ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:license ;
+      sh:class dct:LicenseDocument ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:rights ;
+      sh:class dct:RightsStatement ;
+      sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:language ;
+      sh:class dct:LinguisticSystem ;
+    ] ;
+  sh:property [
+      sh:path dct:spatial ;
+      sh:class dct:Location ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dcat:record ;
+      sh:class dcat:CatalogRecord ;
+      sh:severity sh:Violation ;
+    ] ;
+.
+
+dcat:Dataset
+  rdf:type sh:NodeShape ;
+  sh:property [
+      sh:path dct:title ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:description ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:issued ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node :DateType ;
+    ] ;
+  sh:property [
+      sh:path dct:modified ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node :DateType ;
+    ] ;
+  sh:property [
+      sh:path dct:publisher ;
+      sh:class foaf:Agent ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dcat:contactPoint ;
+      sh:class vcard:Kind ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:language ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:theme ;
+      sh:class skos:Concept ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:distribution ;
+      sh:class dct:Distribution ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dcat:landingPage ;
+      sh:nodeKind foaf:Document ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:spatial ;
+      sh:class dct:Location ;
+            sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:coverage ;
+      sh:class dct:LocationPeriodOrJurisdiction ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:temporal ;
+      sh:class dct:PeriodOfTime ;
+            sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:accrualPeriodicity ;
+      sh:maxCount 1 ;
+            sh:class dct:Frequency ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:identifier ;
+      sh:nodeKind sh:Literal ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:relation ;
+      sh:class rdfs:Resource ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path rdfs:seeAlso ;
+      sh:class rdfs:Resource ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path schema:image ;
+      sh:class schema:ImageObject ;
+      sh:maxCount 3 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path adms:version ;
+      sh:maxCount 0 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path adms:versionNotes ;
+      sh:maxCount 0 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path adms:identifier ;
+      sh:maxCount 0 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:conformsTo ;
+      sh:maxCount 0 ;
+      sh:severity sh:Violation ;
+    ] ;
+.
+
+dcat:Distribution
+  rdf:type sh:NodeShape ;
+  sh:property [
+      sh:path dct:title ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:description ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+
+
+  sh:property [
+      sh:path dct:publisher ;
+      sh:class foaf:Agent ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dcat:contactPoint ;
+      sh:class vcard:Kind ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:language ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
+      sh:path dct:issued ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node :DateType ;
+    ] ;
+  sh:property [
+      sh:path dct:modified ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node :DateType ;
+    ] ;
+.
+
+### SHAPES
+
+:DateType
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Date time date shape checks that a datatype property receives a date literal" ;
+  rdfs:label "Date" ;
+  sh:message "The values must be data typed as xsd:date" ;
+  sh:datatype xsd:date
 .
