@@ -157,7 +157,6 @@ dcat:Dataset
   sh:property [
       sh:path dct:distribution ;
       sh:class dct:Distribution ;
-      sh:maxCount 1 ;
       sh:severity sh:Violation ;
     ] ;
   sh:property [
