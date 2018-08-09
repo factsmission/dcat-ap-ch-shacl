@@ -25,10 +25,10 @@
   sh:targetNode dcat:Catalog ;
 .
 
-
-dcat:Catalog
+:CatalogShape
   rdf:type sh:NodeShape ;
   sh:name "Catalog"@en ;
+  sh:targetClass dcat:Catalog ;
   sh:property [
       sh:path dct:title ;
       sh:minCount 1 ;
@@ -107,8 +107,9 @@ dcat:Catalog
     ] ;
 .
 
-dcat:Dataset
+:DatasetShape
   rdf:type sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
   sh:property [
       sh:path dct:title ;
       sh:minCount 1 ;
@@ -230,8 +231,9 @@ dcat:Dataset
     ] ;
 .
 
-dcat:Distribution
+:DistributionShape
   rdf:type sh:NodeShape ;
+  sh:targetClass dcat:Distribution ;
   sh:property [
       sh:path dct:title ;
       sh:nodeKind sh:Literal ;
