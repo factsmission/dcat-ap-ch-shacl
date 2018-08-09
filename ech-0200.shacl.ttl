@@ -329,10 +329,14 @@ dcat:Distribution
   sh:property [
       sh:path schema:image ;
       sh:severity sh:Violation ;
-      sh:class sh:or [
-          schema:URL ;
-          schema:ImageObject ;
-          ];
+      sh:or (
+            [
+                sh:class schema:URL ;
+            ]
+            [
+                sh:class schema:ImageObject ;
+            ]
+        )
     ] ;
   sh:property [
       sh:path adms:status ;
