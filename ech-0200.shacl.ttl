@@ -330,7 +330,7 @@ dcat:Distribution
       sh:path schema:image ;
       sh:severity sh:Violation ;
       sh:class sh:or [
-          schema:url ;
+          schema:URL ;
           schema:ImageObject ;
           ];
     ] ;
