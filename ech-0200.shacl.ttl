@@ -12,6 +12,8 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
+<> sh:entailment <http://www.w3.org/ns/entailment/RDFS> .
+
 :MandatoryCatalog
   rdf:type sh:NodeShape ;
   rdfs:comment "Mandatory catalog"@en ;
