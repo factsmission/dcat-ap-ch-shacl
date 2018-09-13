@@ -31,6 +31,11 @@ This project is similar an partially based on the [EU DCAT-AP SHACL constraint d
 
 While the eCH-0200 Specification is available in German and French the SHACL Shapes are documented in English to better allign with other Shape files and tools that are likely used together.
 
+## Comments and interpretation of specification
+
+ * The specification mandates the use of schema:url as class. This seems an a mistake and we ssume that schema:URL is what is meant.
+ * Inference: the specification isn't explicit if and what inference should be allowed. We assume that where vcard:Kind is allowed its subclasses (Individual, Organization, Group, Location) should be allowed to. SHACL only allows specifying ontological statements in the data and not in the Shape-Graph, so currently using a subclass is only accepted if the respective rdfs:subClassOf statement is also present in the data. We could of course explcitely allow some named subclassed in the shape file but this doesn't seem to be arranted by the spec.
+
 ## License
 
 As prospective part of an [eCH](https://www.ech.ch/) standard the code and documentations in this repository can be used, distributed and further developed without any restriction by patents or licenses.
