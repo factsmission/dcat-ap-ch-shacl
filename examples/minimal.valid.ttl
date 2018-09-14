@@ -17,7 +17,7 @@
         a dcat:Dataset;
         dct:title "Dataset";
         dct:publisher [ a foaf:Agent ];
-        dct:identifier "propreitray-id-123";
+        dct:identifier "proprietary-id-123";
         dct:description "A dataset";
         dcat:contactPoint [ a vcard:Kind];
     ]
