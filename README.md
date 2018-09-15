@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/factsmission/dcat-ap-ch-shacl.svg?branch=master)](https://travis-ci.com/factsmission/dcat-ap-ch-shacl)
+[![Build Status](https://travis-ci.org/factsmission/dcat-ap-ch-shacl.svg?branch=master)](https://travis-ci.org/factsmission/dcat-ap-ch-shacl)
 
 # SHACL Shapes for the DCAT Application Profile for Data Portals in Switzerland
 
