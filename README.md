@@ -40,7 +40,8 @@ While the eCH-0200 Specification is available in German and French the SHACL Sha
  * the type (`foaf:Document`) does not need to be explicitely specified for a document to validate (the type can be inferred from the rdfs:range of foaf:Document)
 
  ## Other points to discuss
- * Shouldn't we rather require a Dataset to be named (using standard IRI) rather than requiring a proprietary dct:identifier? Analoguos questions can be asked for `dcat:themeTaxonomy` and `foaf:homepage`
+ * Shouldn't we rather require a Dataset to be named (using standard IRI) rather than requiring a proprietary dct:identifier? 
+ * Also, shouldn't the dct:publisher rather be named, than an instance of foaf:Agent? Analoguos questions can be asked for `dcat:themeTaxonomy` and `foaf:homepage`
  * Should xsd:dateTime be supported as well where xsd:date is required?
  * It seems inconsistence to forbid `adms:status` on distributions while generally allowing arbitrary properties.
 
