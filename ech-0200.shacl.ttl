@@ -290,7 +290,7 @@
       sh:node :DateType ;
     ] ;
   sh:property [
-      sh:path dct:accessURL ;
+      sh:path dcat:accessURL ;
       sh:class rdfs:Resource ;
       sh:maxCount 1 ;
       sh:severity sh:Violation ;
@@ -321,16 +321,16 @@
       sh:class rdfs:Resource ;
     ] ;
   sh:property [
-      sh:path dct:byteSize ;
+      sh:path dcat:byteSize ;
       sh:maxCount 1 ;
       sh:severity sh:Violation ;
       sh:class rdfs:Resource ;
     ] ;
   sh:property [
-      sh:path dct:mediaType ;
+      sh:path dcat:mediaType ;
+      sh:class dct:MediaTypeOrExtent ;
       sh:maxCount 1 ;
       sh:severity sh:Violation ;
-      sh:class dct:MediaTypeOrExtent ;
     ] ;
   sh:property [
       sh:path dct:format ;
@@ -346,6 +346,7 @@
   sh:property [
       sh:path schema:image ;
       sh:severity sh:Violation ;
+      sh:maxCount 3 ;
       sh:or (
             [
                 sh:class schema:URL ;
