@@ -34,12 +34,14 @@
   sh:property [
       sh:path dct:title ;
       sh:minCount 1 ;
+      sh:languageIn ( "en" "fr" "it" "de");
       sh:nodeKind sh:Literal ;
       sh:severity sh:Violation ;
     ] ;
   sh:property [
       sh:path dct:description ;
       sh:minCount 1 ;
+      sh:languageIn ( "en" "fr" "it" "de");
       sh:nodeKind sh:Literal ;
       sh:severity sh:Violation ;
     ] ;
@@ -81,18 +83,21 @@
       sh:minCount 1 ;
       sh:severity sh:Violation ;
     ] ;
-  sh:property [
-      sh:path dct:license ;
-      sh:class dct:LicenseDocument ;
-      sh:maxCount 1 ;
-      sh:severity sh:Violation ;
-    ] ;
-  sh:property [
-      sh:path dct:rights ;
-      sh:class dct:RightsStatement ;
-      sh:maxCount 1 ;
-            sh:severity sh:Violation ;
-    ] ;
+  sh:xone (
+    [ sh:property [
+        sh:path dct:license ;
+        sh:class dct:LicenseDocument ;
+        sh:maxCount 1 ;
+      ]
+    ]
+    [ sh:property [
+        sh:path dct:rights ;
+        sh:class dct:RightsStatement ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+      ]
+    ]
+  ) ;
   sh:property [
       sh:path dct:language ;
       sh:class dct:LinguisticSystem ;
