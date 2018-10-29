@@ -214,9 +214,16 @@
     ] ;
   sh:property [
       sh:path schema:image ;
-      sh:class schema:ImageObject ;
       sh:maxCount 3 ;
       sh:severity sh:Violation ;
+      sh:or (
+            [
+                sh:class schema:URL ;
+            ]
+            [
+                sh:class schema:ImageObject ;
+            ]
+        )
     ] ;
   sh:property [
       sh:path adms:version ;
