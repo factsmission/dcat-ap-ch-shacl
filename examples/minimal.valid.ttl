@@ -4,21 +4,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/>.
 
 [
     a dcat:Catalog;
-    dct:description "A catalog";
+    dct:description "A catalog"@en;
     dct:publisher [ a foaf:Agent];
     foaf:homepage <http://example.org/> ;
-    dct:title "Catalog";
+    dct:title "Catalog"@it;
     dct:issued "2018-07-12"^^xsd:date;
-    dcat:themeTaxonomy [ a skos:Concept-Scheme];
-    dcat:dataset [ 
+    dct:rights [ a dct:RightsStatement ] ;
+    dcat:themeTaxonomy [ a skos:Concept-Scheme ];
+    dcat:dataset [
         a dcat:Dataset;
         dct:title "Dataset";
+        dcat:theme [ a skos:Concept ] ;
         dct:publisher [ a foaf:Agent ];
         dct:identifier "proprietary-id-123";
         dct:description "A dataset";
-        dcat:contactPoint [ a vcard:Kind];
+        dcat:contactPoint [ a vcard:Kind ];
+        dcat:image [ a schema:ImageObject ];
     ]
 ].
