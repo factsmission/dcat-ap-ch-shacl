@@ -83,21 +83,18 @@
       sh:minCount 1 ;
       sh:severity sh:Violation ;
     ] ;
-  sh:xone (
-    [ sh:property [
-        sh:path dct:license ;
-        sh:class dct:LicenseDocument ;
-        sh:maxCount 1 ;
-      ]
-    ]
-    [ sh:property [
-        sh:path dct:rights ;
-        sh:class dct:RightsStatement ;
-        sh:maxCount 1 ;
-        sh:severity sh:Violation ;
-      ]
-    ]
-  ) ;
+  sh:property [
+      sh:path dct:license ;
+      sh:class dct:LicenseDocument ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+    ];
+  sh:property [
+      sh:path dct:rights ;
+      sh:class dct:RightsStatement ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+    ];
   sh:property [
       sh:path dct:language ;
       sh:class dct:LinguisticSystem ;
@@ -158,7 +155,7 @@
       sh:severity sh:Violation ;
     ] ;
   sh:property [
-      sh:path dct:theme ;
+      sh:path dcat:theme ;
       sh:class skos:Concept ;
       sh:severity sh:Violation ;
     ] ;
@@ -168,14 +165,19 @@
       sh:severity sh:Violation ;
     ] ;
   sh:property [
+      sh:path dcat:keyword ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+  sh:property [
       sh:path dcat:landingPage ;
-      sh:nodeKind foaf:Document ;
+      sh:class foaf:Document ;
       sh:severity sh:Violation ;
     ] ;
   sh:property [
       sh:path dct:spatial ;
       sh:class dct:Location ;
-            sh:severity sh:Violation ;
+      sh:severity sh:Violation ;
     ] ;
   sh:property [
       sh:path dct:coverage ;
