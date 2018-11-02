@@ -6,7 +6,7 @@ This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata
 
 ## Status
 
-This project is work in progress. The functionality described in this README might not yet be implemented or not yet work as described.
+While the basic functionality is usable this project is awaiting more reviewer's feedback as well as discussions in the ECH OGD Group.
 
 ## Files
 
