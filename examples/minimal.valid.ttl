@@ -12,7 +12,7 @@
     dct:publisher [ a foaf:Agent];
     foaf:homepage <http://example.org/> ;
     dct:title "Catalog"@it;
-    dct:issued "2018-07-12"^^xsd:date;
+    dct:issued "2002-05-30T09:00:00"^^xsd:dateTime;
     dct:rights [ a dct:RightsStatement ] ;
     dcat:themeTaxonomy [ a skos:Concept-Scheme ];
     dcat:dataset [
