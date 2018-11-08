@@ -6,7 +6,7 @@ This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata
 
 ## Status
 
-While the basic functionality is usable this project is awaiting more reviewer's feedback as well as discussions in the ECH OGD Group.
+This project is work in progress. The functionality described in this README might not yet be implemented or not yet work as described.
 
 ## Files
 
@@ -24,6 +24,28 @@ For example (from this directory):
     shaclvalidate -shapesfile ech-0200.shacl.ttl -datafile .\examples\minimal.valid.ttl
 
 The example isn't strictly minimal as omitting `dcat:themeTaxonomy` would only resul in a warning.
+
+### Validating not turtle files
+
+In order to work with RDF/XML files you need to convert the file in turtle format.
+
+First you need Jena/riot. To download and extract it type this commands:
+
+```BASH
+wget https://www-eu.apache.org/dist/jena/binaries/apache-jena-3.9.0.tar.gz
+tar xvzf apache-jena-3.9.0.tar.gz
+```
+
+Now you have a folder named `apache-jena-3.9.0`. To convert your `RDF/XML` file (eg. `file.rdf`) you can use this command:
+
+```
+./apache-jena-3.9.0/bin/riot --output=turtle rdfxml file.rdf > file.ttl
+```
+
+And you will find the converted result in `file.ttl`.
+
+riot support these RDF formats: `turtle`, `ntriples`, `nquads`, `trig` and `rdfxml`.
+
 
 ## References
 
