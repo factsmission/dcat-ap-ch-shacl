@@ -368,10 +368,17 @@
 
 :DateType
   rdf:type sh:NodeShape ;
-  rdfs:comment "Date time date shape checks that a datatype property receives a date literal" ;
+  rdfs:comment "Date time date shape checks that a datatype property receives a date or dateTime literal" ;
   rdfs:label "Date" ;
-  sh:message "The values must be data typed as xsd:date" ;
-  sh:datatype xsd:date
+  sh:message "The values must be data typed as xsd:date or xsd:dateTime." ;
+  sh:or (
+       [
+           sh:datatype xsd:date ;
+       ]
+       [
+           sh:datatype xsd:dateTime ;
+       ]
+   )
 .
 
 :DecimalType
