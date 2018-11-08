@@ -83,18 +83,24 @@
       sh:minCount 1 ;
       sh:severity sh:Violation ;
     ] ;
-  sh:property [
-      sh:path dct:license ;
-      sh:class dct:LicenseDocument ;
-      sh:maxCount 1 ;
-      sh:severity sh:Violation ;
-    ];
-  sh:property [
-      sh:path dct:rights ;
-      sh:class dct:RightsStatement ;
-      sh:maxCount 1 ;
-      sh:severity sh:Violation ;
-    ];
+  sh:xone (
+      [
+        sh:property [
+          sh:path dct:license ;
+          sh:class dct:LicenseDocument ;
+          sh:minCount 1 ;
+      	  sh:maxCount 1 ;
+        ]
+      ]
+      [
+        sh:property [
+          sh:path dct:rights ;
+          sh:class dct:RightsStatement ;
+	        sh:minCount 1 ;
+      	  sh:maxCount 1 ;
+        ]
+      ]
+  ) ;
   sh:property [
       sh:path dct:language ;
       sh:class dct:LinguisticSystem ;
@@ -295,19 +301,24 @@
       sh:maxCount 1 ;
       sh:severity sh:Violation ;
     ] ;
-  sh:property [
-      sh:path dct:rights ;
-      sh:minCount 1 ;
-      sh:maxCount 1 ;
-      sh:severity sh:Violation ;
-      sh:class dct:RightsStatement ;
-    ] ;
-  sh:property [
-      sh:path dct:license ;
-      sh:maxCount 1 ;
-      sh:severity sh:Violation ;
-      sh:class dct:LicenseDocument ;
-    ] ;
+    sh:xone (
+        [
+          sh:property [
+            sh:path dct:license ;
+            sh:class dct:LicenseDocument ;
+            sh:minCount 1 ;
+        	  sh:maxCount 1 ;
+          ]
+        ]
+        [
+          sh:property [
+            sh:path dct:rights ;
+            sh:class dct:RightsStatement ;
+  	        sh:minCount 1 ;
+        	  sh:maxCount 1 ;
+          ]
+        ]
+    ) ;
   sh:property [
       sh:path dct:identifier ;
       sh:maxCount 1 ;
