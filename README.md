@@ -4,10 +4,6 @@
 
 This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 Standard](https://www.ech.ch/vechweb/page?p=dossier&documentNumber=eCH-0200&documentVersion=1.0).
 
-## Status
-
-This project is work in progress. The functionality described in this README might not yet be implemented or not yet work as described.
-
 ## Files
 
  * `ech-0200.shacl.ttl` : This file models the constraints defined in eCH-200 with the SHACL vocabulary
