@@ -2,12 +2,12 @@
 
 # SHACL Shapes for the DCAT Application Profile for Data Portals in Switzerland
 
-This project provides [SHACL](https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 Standard](https://www.ech.ch/vechweb/page?p=dossier&documentNumber=eCH-0200&documentVersion=1.0).
+This project provides [SHACL] shapes (https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 Standard](https://www.ech.ch/vechweb/page?p=dossier&documentNumber=eCH-0200&documentVersion=1.0).
 
 ## Files
 
  * `ech-0200.shacl.ttl` : This file models the constraints defined in eCH-200 with the SHACL vocabulary
- * `examples/` : This directory contains RDF Turtle files that can be used to test `ech-0200.shacl.ttl`. The conventions is that files ending with `.valid.ttl` will validate and files einding with `.fail.ttl`do not validate.
+ * `examples/` : This directory contains RDF Turtle files that can be used to test `ech-0200.shacl.ttl`. The convention is that files ending with `.valid.ttl` will validate, while files ending with `.fail.ttl` will not validate.
 
 ## Usage
 
