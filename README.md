@@ -60,11 +60,11 @@ While the eCH-0200 Specification is available in German and French the SHACL sha
  * The specification mandates the use of `schema:url`v as class. This seems a mistake and we assume that `schema:URL` is what is meant.
  * The SHACL file also supports `xsd:dateTime` where the spec mandates `xsd:date`.
  * Inference: The specification isn't explicit if and what inference should be allowed. We assume that where `vcard:Kind` is allowed its subclasses (Individual, Organization, Group, Location) should be allowed to. SHACL only allows specifying ontological statements in the data and not in the shape graph, so currently using a subclass is only accepted if the respective `rdfs:subClassOf` statement is also present in the data. We could of course explicitly allow some named subclassed in the shape file but this doesn't seem to be wanted by the spec.
- * The type (`foaf:Document`) does not need to be explicitely specified for a document to validate (the type can be inferred from the `rdfs:range` of `foaf:Document`)
+ * The type (`foaf:Document`) does not need to be explicitely specified for a document to validate; the type can be inferred from the `rdfs:range` of `foaf:Document`.
 
  ## Other Points to Discuss
- * Shouldn't we rather require a dataset to be named (using standard IRI) rather than requiring a proprietary `dct:identifier`?
- * Also, shouldn't the `dct:publisher` be named, rather than being an instance of `foaf:Agent`? Analogous questions can be asked for `dcat:themeTaxonomy` and `foaf:homepage`
+ * Shouldn't we require a dataset to be named (using standard IRI) rather than requiring a proprietary `dct:identifier`?
+ * Also, shouldn't the `dct:publisher` be named, rather than being an instance of `foaf:Agent`? Analogous questions can be asked for `dcat:themeTaxonomy` and `foaf:homepage`.
  * Should `xsd:dateTime` be supported as well where `xsd:date` is required?
  * It seems inconsistent to forbid `adms:status` on distributions while generally allowing arbitrary properties.
 
