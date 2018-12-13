@@ -2,16 +2,16 @@
 
 # SHACL Shapes for the DCAT Application Profile for Data Portals in Switzerland
 
-This project provides [SHACL shapes](https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 Standard](https://www.ech.ch/vechweb/page?p=dossier&documentNumber=eCH-0200&documentVersion=1.0).
+This project provides [SHACL shapes](https://www.w3.org/TR/shacl/) to validate metadata against the [eCH-0200 standard](https://www.ech.ch/vechweb/page?p=dossier&documentNumber=eCH-0200&documentVersion=1.0).
 
 ## Files
 
  * `ech-0200.shacl.ttl` : This file models the constraints defined in eCH-200 with the SHACL vocabulary
- * `examples/` : This directory contains RDF Turtle files that can be used to test `ech-0200.shacl.ttl`. The convention is that files ending with `.valid.ttl` will validate, while files ending with `.fail.ttl` will not validate.
+ * `examples/` : This directory contains RDF turtle files that can be used to test `ech-0200.shacl.ttl`. The convention is that files ending with `.valid.ttl` will validate, while files ending with `.fail.ttl` will not validate.
 
 ## Usage
 
-To use the shapes to validate data you need a SHACL validator such as [TopBraid SHACL API](https://github.com/TopQuadrant/shacl). With this validator you can validate RDF Turtle files as follows:
+To use the shapes to validate data, you need a SHACL validator such as [TopBraid SHACL API](https://github.com/TopQuadrant/shacl). With this validator you can validate RDF turtle files as follows:
 
 ```BASH
 $ shaclvalidate -shapesfile ech-0200.shacl.ttl -datafile data.ttl
@@ -57,7 +57,7 @@ While the eCH-0200 Specification is available in German and French the SHACL sha
 
 ## Comments on the Interpretation of the Specification
 
- * The specification mandates the use of `schema:url`v as class. This seems a mistake and we assume that `schema:URL` is what is meant.
+ * The specification mandates the use of `schema:url` as class. This seems to be a mistake, so we assume that `schema:URL` is what it's supposed to mean.
  * The SHACL file also supports `xsd:dateTime` where the spec mandates `xsd:date`.
  * Inference: The specification isn't explicit if and what inference should be allowed. We assume that where `vcard:Kind` is allowed its subclasses (Individual, Organization, Group, Location) should be allowed to. SHACL only allows specifying ontological statements in the data and not in the shape graph, so currently using a subclass is only accepted if the respective `rdfs:subClassOf` statement is also present in the data. We could of course explicitly allow some named subclassed in the shape file but this doesn't seem to be wanted by the spec.
  * The type (`foaf:Document`) does not need to be explicitely specified for a document to validate; the type can be inferred from the `rdfs:range` of `foaf:Document`.
