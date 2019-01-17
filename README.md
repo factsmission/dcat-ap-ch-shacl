@@ -23,11 +23,9 @@ For example (from this directory):
 $ shaclvalidate -shapesfile ech-0200.shacl.ttl -datafile .\examples\minimal.valid.ttl
 ```
 
-The example isn't strictly minimal, as omitting `dcat:themeTaxonomy` would only result in a warning.
+### Validating files in formats other than Turtle
 
-### Validating non Turtle Files
-
-In order to work with RDF/XML files you need to convert the file in turtle format.
+As the TopBraid SHACL validator only supports the [Turtle](https://www.w3.org/TR/turtle/) RDF Format, you need to convert files in other formats such as RDF/XML files.
 
 First you need Apache Jena. You can download and extract it with these commands:
 
