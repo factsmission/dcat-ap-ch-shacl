@@ -65,7 +65,6 @@ While the eCH-0200 Specification is available in German and French the SHACL sha
  ## Other Points to Discuss
  * Shouldn't we require a dataset to be named (using standard IRI) rather than requiring a proprietary `dct:identifier`?
  * Also, shouldn't the `dct:publisher` be named, rather than being an instance of `foaf:Agent`? Analogous questions can be asked for `dcat:themeTaxonomy` and `foaf:homepage`.
- * Should `xsd:dateTime` be supported as well where `xsd:date` is required?
  * It seems inconsistent to forbid `adms:status` on distributions while generally allowing arbitrary properties.
 
 ## License
